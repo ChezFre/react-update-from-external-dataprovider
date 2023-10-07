@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <button id="add-todo">Add content from outside of React</button>
+    <button id="remove-todo">remove content from outside of React</button>
+    <script type="text/javascript">
+      const btnAdd = document.getElementById("add-todo");
+      const btnRemove = document.getElementById("remove-todo");
+
+      btnAdd.addEventListener("click", () => {
+        window.dataStore.addData();
+      });
+      btnRemove.addEventListener("click", () => {
+        window.dataStore.removeData();
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
